@@ -7,7 +7,8 @@ public class Coupon
         int couponNumber = 1111; // Купон
         double resultSum = 100.0; // Сумма покупки
 
-        switch (couponNumber) {
+        switch (couponNumber)
+        {
             case 1111:
                 resultSum *= 0.9; // 10%
                 break;
