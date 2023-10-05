@@ -5,7 +5,7 @@ public class MathRandom
     public static void main(String[] args)
     {
         // Перменная методом мас.рандом генерирует рандомное число в интервале [10;500]
-        var randomNumber = (Math.random() * (500 - 10 + 1)) + 10;
+        int randomNumber = (int) ((Math.random() * (500 - 10 + 1)) + 10);
 
         // Проверяем, попало ли число в интервал (25;200)
         //Если попало
