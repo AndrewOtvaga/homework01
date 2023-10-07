@@ -4,8 +4,8 @@ public class Position
 {
     public static void main(String[] args)
     {
-        double x = Math.random() * 101 - 50; // случайное значение (-50 +50) можно увеличить при необходимости
-        double y = Math.random() * 101 - 50; // аналогично
+        int x = (int) (Math.random() * 101 - 50); // случайное значение (-50 +50) можно увеличить при необходимости
+        int y = (int) (Math.random() * 101 - 50); // аналогично
 
         if (x > 0 && y > 0)
         {
