@@ -17,6 +17,6 @@ public class While
             sum += step % 10;
             step /= 10;
         }
-        System.out.println("Cумма всец цифр в числе = " + sum);
+        System.out.println("Cумма всец цифр в числе =  " + sum);
     }
 }
