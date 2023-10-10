@@ -1,6 +1,6 @@
 package homework5;
 
-public class window
+public class Window
 {
         public static void main(String[] args)
         {
