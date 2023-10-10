@@ -24,11 +24,11 @@ public class error
             {
                 max = computerAnswer - 1;
                 {
-                    else if (yourAnswer == 2)
+                   // else if (yourAnswer == 2)
                 {
                     min = computerAnswer + 1;
                 }
-                else if (yourAnswer == 3)
+                //else if (yourAnswer == 3)
                 {
                     System.out.println("Ура! Я угадал число");
                     break;
