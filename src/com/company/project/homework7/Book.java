@@ -10,6 +10,10 @@ public class Book {
         setNumberOfAuthors(numberOfAuthors);
     }
 
+    public Book(String java)
+    {
+    }
+
     public void setName(String name) {
         if (name == null) {
             throw new IllegalArgumentException("Name cannot be null");
