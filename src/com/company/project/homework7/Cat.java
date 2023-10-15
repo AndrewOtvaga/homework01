@@ -2,10 +2,15 @@ package com.company.project.homework7;
 
 public class Cat
 {
-
-    private String name;
+    private String name = "Cнежок";
     private int weight;
     private int numberOfWins;
+
+    public Cat()
+    {
+        this.name = "Cнежок";
+        this.weight = 1;
+    }
 
     public Cat(String name, int weight)
     {
@@ -26,9 +31,6 @@ public class Cat
         if (weight >= 1 && weight < 9)
         {
             this.weight = weight;
-        } else
-        {
-            throw new IllegalArgumentException("Weight must be between 1 and 8");
         }
     }
 
