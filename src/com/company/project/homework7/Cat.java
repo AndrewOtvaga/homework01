@@ -6,10 +6,10 @@ public class Cat
     private int weight;
     private int numberOfWins;
 
-    public Cat()
+    public Cat(int weight )
     {
         this.name = "Cнежок";
-        this.weight = 1;
+        this.weight = weight;
     }
 
     public Cat(String name, int weight)

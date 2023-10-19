@@ -1,4 +1,4 @@
-package com.company.project.lesson07;
+package com.company.project.homework7;
 
 public class Book
 {
