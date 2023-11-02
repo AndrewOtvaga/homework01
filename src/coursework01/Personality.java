@@ -9,7 +9,14 @@ public class Personality
         private int birthYear;
 
         public Personality(String firstName, String lastName, int birthYear)
+        //добавил проверки на Имя, Фамилию, Год рождения
         {
+            if (firstName == null || firstName.length() < 2)
+                throw new IllegalArgumentException("Чё у тебя за имя-то такое?");
+            if (lastName == null || lastName.length() < 2)
+                throw new IllegalArgumentException("Чё у тебя за фамилия такая?");
+            if (birthYear < 2005)
+                throw new IllegalArgumentException("Подрастёшь, приходи");
             this.firstName = firstName;
             this.lastName = lastName;
             this.birthYear = birthYear;

@@ -8,7 +8,7 @@ abstract class Membership
 {
         private String number;
         private LocalDate registrationDate;
-        private LocalDate expirationDate;
+        public LocalDate expirationDate;
         private Personality personality;
 
         public Membership(String number, Personality personality)
