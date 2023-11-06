@@ -39,7 +39,7 @@ public class ClubManager
         }
         else
         {
-            System.out.println("Неизвестная зона.");
+            System.out.println("Ты куда собрался?");
             return;
         }
 
