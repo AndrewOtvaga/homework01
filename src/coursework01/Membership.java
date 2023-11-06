@@ -1,5 +1,5 @@
 package coursework01;
-
+//Здесь содержатся общие свойства всем типов абонементов
 import java.time.LocalDate;
 import java.time.LocalTime;
 

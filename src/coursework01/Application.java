@@ -1,7 +1,7 @@
 package coursework01;
 import java.time.LocalDate;
-//Здесь создаю экземпляр класса ClubManager и добавляю в него несколько абонементов разных типов
-//
+//Созданы объекты класса Membership вместо классов GymMembership, DayMembership и FulLMembership
+//Добавил метод setExpirationDate
 public class Application
 {
     public static void main(String[] args)

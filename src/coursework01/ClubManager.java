@@ -4,8 +4,8 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-//Класс ClubManager управляет абонементами и отслеживает посетителей в каждой зоне фитнес-клуба.
-// В нём прописал массивы для тренажерного зала, бассейна и групповых занятий.
+//Теперь заместо списка отдельных классов используется список memberships для хранения всех абонементов
+//Метод addMembershipToZone проверяет не зарегестрирован ли абонемент уже в конкретной зоне
 public class ClubManager
 {
     private List<Membership> memberships;
