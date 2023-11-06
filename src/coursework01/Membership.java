@@ -1,32 +1,48 @@
 package coursework01;
+
 import java.time.LocalDate;
-//Из всех названий абонемента на английском - это самое звучное
-//Класс Membership является абстрактным классом(но в целом может быть и обычным public- работать будет),
-// который представляет абонемент и содержит общие свойства, такие как номер, дата регистрации и дата окончания регистрации.
-// Он также содержит ссылку на владельца абонемента
-abstract class Membership
+import java.time.LocalTime;
+
+public class Membership
 {
-        private String number;
-        private LocalDate registrationDate;
-        public LocalDate expirationDate;
-        private Personality personality;
+    private Personality owner;
+    private String membershipId;
+    private LocalDate expirationDate;
+    private TypeOfMember typeOfMember;
 
-        public Membership(String number, Personality personality)
-        {
-            this.number = number;
-            this.personality = personality;
-            this.registrationDate = LocalDate.now();
-        }
+    public Membership(String membershipId, Personality owner)
+    {
+        this.membershipId = membershipId;
+        this.owner = owner;
+    }
 
-        public void setExpirationDate(LocalDate expirationDate)
-        {
-            this.expirationDate = expirationDate;
-        }
+    public void setExpirationDate(LocalDate expirationDate)
+    {
+        this.expirationDate = expirationDate;
+    }
 
-        public Personality getOwner()
-        {
-            return personality;
-        }
+    public void setTypeOfMember(TypeOfMember typeOfMember)
+    {
+        this.typeOfMember = typeOfMember;
+    }
+
+    public Personality getOwner()
+    {
+        return owner;
+    }
+
+    public String getMembershipId()
+    {
+        return membershipId;
+    }
+
+    public LocalDate getExpirationDate()
+    {
+        return expirationDate;
+    }
+
+    public TypeOfMember getTypeOfMember()
+    {
+        return typeOfMember;
+    }
 }
-
-
