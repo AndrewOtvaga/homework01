@@ -1,8 +1,13 @@
 package com.company.project.lessonexercise1516;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
-public class Fruit {
+public class Fruit
+{
     private final FruitType type;
     private double price;
     private int count;
@@ -40,15 +45,27 @@ public class Fruit {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o)
+    {
         if (this == o) return true;
         if (!(o instanceof Fruit fruit)) return false;
         return Double.compare(getPrice(), fruit.getPrice()) == 0 && getCount() == fruit.getCount() && getType() == fruit.getType();
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         return Objects.hash(getType(), getPrice(), getCount());
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Fruit{" +
+                "type=" + type +
+                ", price=" + price +
+                ", count=" + count +
+                '}';
     }
 
     public enum FruitType
