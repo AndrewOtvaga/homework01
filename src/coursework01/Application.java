@@ -2,10 +2,8 @@ package coursework01;
 import java.time.LocalDate;
 //Созданы объекты класса Membership вместо классов GymMembership, DayMembership и FulLMembership
 //Добавил метод setExpirationDate
-public class Application
-{
-    public static void main(String[] args)
-    {
+class Application {
+    public static void main(String[] args) {
         ClubManager clubManager = new ClubManager();
 
         Personality personality1 = new Personality("Billy", "Harrington", 1969);
@@ -20,10 +18,10 @@ public class Application
         Membership fullMembership1 = new Membership("003", personality1);
         fullMembership1.setExpirationDate(LocalDate.of(2022, 12, 31));
 
-        clubManager.addMembershipToZone("gym", gymMembership1);
-        clubManager.addMembershipToZone("gym", gymMembership1); // Будет отклонено, так как абонемент уже зарегистрирован в спортзале
-        clubManager.addMembershipToZone("pool", dayMembership1);
-        clubManager.addMembershipToZone("pool", fullMembership1); // Будет отклонено, так как полный абонемент не дает доступ к бассейну
+        clubManager.addMembershipToZone(TypeOfMember.GYM, gymMembership1);
+        clubManager.addMembershipToZone(TypeOfMember.GYM, gymMembership1); // Will be rejected as the membership is already registered in the gym
+        clubManager.addMembershipToZone(TypeOfMember.POOL, dayMembership1);
+        clubManager.addMembershipToZone(TypeOfMember.POOL, fullMembership1); // Will be rejected as the full membership does not provide access to the pool
 
         clubManager.printCurrentVisitors();
     }

@@ -5,41 +5,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Теперь заместо списка отдельных классов используется список memberships для хранения всех абонементов
-//Метод addMembershipToZone проверяет не зарегестрирован ли абонемент уже в конкретной зоне
-public class ClubManager
-{
-    private List<Membership> memberships;
+//Метод addMembershipToZone принимает на вход два параментра TypeOfMember и Membership
+//И проверяет, не зарегистрирован ли уже абонемент в какой-либо зоне
+//
+public class ClubManager {
+    private List<Membership> memberships;//список абонементов
 
-    public ClubManager()
-    {
-        memberships = new ArrayList<>();
+    public ClubManager() {
+        this.memberships = new ArrayList<>();
     }
 
-    public void addMembershipToZone(String zone, Membership membership)
-    {
-        // Проверяем, не зарегистрировано ли уже абонемент в этой зоне
-        for (Membership existingMembership : memberships)
-        {
-            if (existingMembership.getTypeOfMember().getZone().equals(zone))
-            {
-                System.out.println("Абонемент уже зарегистрирован в этой зоне.");
-                return;
-            }
-        }
-
-        // Устанавливаем тип абонемента
-        TypeOfMember typeOfMember;
-        if (zone.equals("gym"))
-        {
-            typeOfMember = new TypeOfMember(LocalTime.of(6, 0), LocalTime.of(22, 0), zone);
-        }
-        else if (zone.equals("pool"))
-        {
-            typeOfMember = new TypeOfMember(LocalTime.of(9, 0), LocalTime.of(18, 0), zone);
-        }
-        else
-        {
-            System.out.println("Ты куда собрался?");
+    public void addMembershipToZone(TypeOfMember typeOfMember, Membership membership) {
+        if (membership.getTypeOfMember() != null) {
+            System.out.println("Абонемент уже зарегистрирован");
             return;
         }
 
@@ -47,7 +25,7 @@ public class ClubManager
         memberships.add(membership);
     }
 
-    public void printCurrentVisitors()
+    public void printCurrentVisitors() //текущие посетители
     {
         for (Membership membership : memberships)
         {

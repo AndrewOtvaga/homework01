@@ -21,6 +21,6 @@ public class PairContainerEx
 
     PairContainer<String, User> pair2 = new PairContainer<>("ключ", new User(456));
 
-    PairContainer<String, PairContainer<Integer, User>> pair3 = new PairContainer<>("ключ", new PairContainer<>(789, new User("идентификатор")));
+    //PairContainer<String, PairContainer<Integer, User>> pair3 = new PairContainer<>("ключ", new PairContainer<>(789, new User("идентификатор")));
 
 }

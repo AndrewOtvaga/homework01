@@ -3,27 +3,24 @@ package coursework01;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Membership
+
+class Membership
 {
+    //id и owner инфа о валдельце
+    private String id;
     private Personality owner;
-    private String membershipId;
     private LocalDate expirationDate;
     private TypeOfMember typeOfMember;
 
-    public Membership(String membershipId, Personality owner)
+    public Membership(String id, Personality owner)
     {
-        this.membershipId = membershipId;
+        this.id = id;
         this.owner = owner;
     }
 
-    public void setExpirationDate(LocalDate expirationDate)
+    public String getId()
     {
-        this.expirationDate = expirationDate;
-    }
-
-    public void setTypeOfMember(TypeOfMember typeOfMember)
-    {
-        this.typeOfMember = typeOfMember;
+        return id;
     }
 
     public Personality getOwner()
@@ -31,18 +28,23 @@ public class Membership
         return owner;
     }
 
-    public String getMembershipId()
-    {
-        return membershipId;
-    }
-
     public LocalDate getExpirationDate()
     {
         return expirationDate;
     }
 
+    public void setExpirationDate(LocalDate expirationDate)//дата истечения срока
+    {
+        this.expirationDate = expirationDate;
+    }
+
     public TypeOfMember getTypeOfMember()
     {
         return typeOfMember;
+    }
+
+    public void setTypeOfMember(TypeOfMember typeOfMember)
+    {
+        this.typeOfMember = typeOfMember;
     }
 }
