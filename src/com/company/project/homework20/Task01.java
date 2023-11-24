@@ -23,8 +23,7 @@ public class Task01
                 new Student(12, "Ирина", Student.Sex.FEMALE, LocalDate.now().minusYears(6))
         ));
         // 1. Разделить учеников на две группы: мальчиков и девочек. Результат: Map<Student.Sex, ArrayList<Student>>
-        Map<Student.Sex, ArrayList<Student>> studentsBySex = students.stream()
-                .collect(Collectors.groupingBy(Student::getSex, Collectors.toCollection(ArrayList::new)));
+
         //2. Средний возраст учеников
         double averageAge = students.stream()
                 .collect(Collectors.averagingInt(student -> student.getBirth().until(LocalDate.now()).getYears()));;
@@ -46,7 +45,7 @@ public class Task01
                 .filter(student -> student.getName().equals(someName))
                 .collect(Collectors.toList());
         //7. Мапа
-        Map<Student.Sex, Integer> genderAgeMap = students.stream()
+        Map<Student.Sex, Integer> sexIntegerMap = students.stream()
                 .collect(Collectors.groupingBy(Student::getSex, Collectors.summingInt(student -> student.getBirth().until(LocalDate.now()).getYears())));
 
     }
