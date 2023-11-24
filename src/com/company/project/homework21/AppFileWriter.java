@@ -16,11 +16,11 @@ class AppFileWriter implements AppLogger
     }
 
     @Override
-    public void log(String message)
+    public void log(String mesage)
     {
         try
         {
-            Files.writeString(Paths.get(fileName), message, StandardOpenOption.APPEND);
+            Files.writeString(Paths.get(fileName), mesage, StandardOpenOption.APPEND);
         }
         catch (IOException e)
         {

@@ -11,8 +11,8 @@ class Upper implements AppLogger
     }
 
     @Override
-    public void log(String message)
+    public void log(String mesage)
     {
-        logger.log(message.toUpperCase());
+        logger.log(mesage.toUpperCase());
     }
 }

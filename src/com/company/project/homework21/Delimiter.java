@@ -11,8 +11,8 @@ class Delimiter implements AppLogger
     }
 
     @Override
-    public void log(String message)
+    public void log(String mesage)
     {
-        logger.log("===" + message + "===");
+        logger.log("===" + mesage + "===");
     }
 }

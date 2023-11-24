@@ -4,8 +4,8 @@ package com.company.project.homework21;
 class ConsoleWriter implements AppLogger
 {
     @Override
-    public void log(String message)
+    public void log(String mesage)
     {
-        System.out.println(message);
+        System.out.println(mesage);
     }
 }
