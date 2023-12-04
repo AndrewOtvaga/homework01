@@ -1,5 +1,5 @@
 package com.company.project.homework7;
-
+/*
 public class Lesson07
 {
     public static void main(String[] args)
@@ -22,3 +22,4 @@ public class Lesson07
 
     }
 }
+*/

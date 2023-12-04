@@ -1,14 +1,15 @@
 package com.company.project.homework7;
-
+/*
 public class Book
 {
     private String name;
     private boolean isPublished;
     private Author[] authors;
 
-    public Book(String name, int numberOfAuthors)
+    public Book(String name)
     {
         setName(name);
+        int numberOfAuthors;
         setNumberOfAuthors(numberOfAuthors);
     }
 
@@ -69,3 +70,4 @@ public class Book
         throw new IllegalStateException("Cannot add author, array is full");
     }
 }
+*/
